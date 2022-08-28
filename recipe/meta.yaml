@@ -1,5 +1,5 @@
 {% set name = "flet" %}
-{% set version = "0.1.52" %}
+{% set version = "0.1.54" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flet-{{ version }}.tar.gz
-  sha256: 9612e2b41e40600daedd18c3c68eb1eb726aeffde84b203db4793d91496bbb8d
+  sha256: f40716c719deff3c1149b2994943e2b5d6cc41b071c0002d902b3278360d374f
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
+  entry_points:
+    - flet = flet.flet:main
 
 requirements:
   host:
@@ -24,6 +26,7 @@ requirements:
     - python >=3.7
     - repath >=0.9.0
     - typing_extensions
+    - watchdog >=2.1.9
     - websocket-client >=1.2.1
 
 test:
@@ -31,6 +34,7 @@ test:
     - flet
   commands:
     - pip check
+    - flet --help
   requires:
     - pip
 
