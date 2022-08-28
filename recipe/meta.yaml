@@ -13,6 +13,8 @@ build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
+  entry_points:
+    - flet = flet.flet:main
 
 requirements:
   host:
@@ -24,6 +26,7 @@ requirements:
     - python >=3.7
     - repath >=0.9.0
     - typing_extensions
+    - watchdog >=2.1.9
     - websocket-client >=1.2.1
 
 test:
@@ -31,6 +34,7 @@ test:
     - flet
   commands:
     - pip check
+    - flet --help
   requires:
     - pip
 
