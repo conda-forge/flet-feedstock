@@ -23,20 +23,27 @@ requirements:
     - python >=3.7
   run:
     - beartype >=0.9.1
+    - cryptography >=38.0.1
+    - oauthlib >=3.2.0
     - python >=3.7
     - repath >=0.9.0
+    - requests >=2.28.1
     - typing_extensions
     - watchdog >=2.1.9
     - websocket-client >=1.2.1
 
 test:
+  source_files:
+    - tests
   imports:
     - flet
   commands:
     - pip check
     - flet --help
+    - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
+    - pytest >=6.1.2
 
 about:
   home: https://github.com/flet-dev/flet
