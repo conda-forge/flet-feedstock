@@ -33,13 +33,17 @@ requirements:
     - websocket-client >=1.2.1
 
 test:
+  source_files:
+    - tests
   imports:
     - flet
   commands:
     - pip check
     - flet --help
+    - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
+    - pytest >=6.1.2
 
 about:
   home: https://github.com/flet-dev/flet
