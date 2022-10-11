@@ -1,5 +1,5 @@
 {% set name = "flet" %}
-{% set version = "0.1.61" %}
+{% set version = "0.1.62" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flet-{{ version }}.tar.gz
-  sha256: 8320231d20f882ab7348f7cc9614fb759be7f55d72e315734175982fe081c796
+  sha256: 96c07480c931cc2bd4f41f139182e43ccf8882348947ed1d5d59bc44e7c02d98
 
 build:
   noarch: python
