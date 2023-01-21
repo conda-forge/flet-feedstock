@@ -14,7 +14,7 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
   entry_points:
-    - flet = flet.flet:main
+    - flet = flet.cli.cli:main
 
 requirements:
   host:
