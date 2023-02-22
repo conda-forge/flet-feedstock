@@ -1,5 +1,5 @@
 {% set name = "flet" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flet-{{ version }}.tar.gz
-  sha256: 08c788299bd23c4899479cd4aeaa5d7ce51c4bc85797fda5bb4c39bc833d4bd0
+  sha256: 0f135d3cc670a5dc1122f04da9295ae3721025dbba3529f010eebdf1f1ee66a0
 
 build:
   noarch: python
@@ -18,31 +18,29 @@ build:
 
 requirements:
   host:
-    - pdm-pep517
     - pip
+    - poetry-core
     - python >=3.7
   run:
-    - beartype >=0.9.1
-    - oauthlib >=3.2.0
+    - flet-core ==0.4.2
+    - httpx >=0.23.3,<0.24.0
+    - oauthlib >=3.2.2,<4.0.0
+    - packaging >=23.0,<24.0
     - python >=3.7
-    - repath >=0.9.0
     - requests >=2.28.1
-    - typing_extensions
-    - watchdog >=2.1.9
-    - websocket-client >=1.2.1
+    - typing_extensions >=4.4.0,<5.0.0
+    - watchdog >=2.2.1,<3.0.0
+    - websockets >=10.4,<11.0
+    - websocket-client >=1.4.2,<2.0.0
 
 test:
-  source_files:
-    - tests
   imports:
     - flet
   commands:
     - pip check
     - flet --help
-    - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
-    - pytest >=6.1.2
 
 about:
   home: https://github.com/flet-dev/flet
