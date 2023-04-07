@@ -1,5 +1,5 @@
 {% set name = "flet" %}
-{% set version = "0.4.2" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flet-{{ version }}.tar.gz
-  sha256: 0f135d3cc670a5dc1122f04da9295ae3721025dbba3529f010eebdf1f1ee66a0
+  sha256: b88111a76dd320f05d64a54d742f4ed7c16945c1001f61d225d6739e7bebdc58
 
 build:
   noarch: python
@@ -22,12 +22,11 @@ requirements:
     - poetry-core
     - python >=3.7
   run:
-    - flet-core ==0.4.2
+    - flet-core ==0.5.0
     - httpx >=0.23.3,<0.24.0
     - oauthlib >=3.2.2,<4.0.0
     - packaging >=23.0,<24.0
     - python >=3.7
-    - requests >=2.28.1
     - typing_extensions >=4.4.0,<5.0.0
     - watchdog >=2.2.1,<3.0.0
     - websockets >=10.4,<11.0

@@ -1,11 +1,11 @@
-About flet
-==========
+About flet-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flet-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/flet-dev/flet
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flet-feedstock/blob/main/LICENSE.txt)
 
 Summary: Flet for Python - easily build interactive multi-platform apps in Python
 
