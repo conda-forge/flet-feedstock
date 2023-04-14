@@ -22,7 +22,7 @@ requirements:
     - poetry-core
     - python >=3.7
   run:
-    - flet-core ==0.5.0
+    - flet-core ==0.5.1
     - httpx >=0.23.3,<0.24.0
     - oauthlib >=3.2.2,<4.0.0
     - packaging >=23.0,<24.0
