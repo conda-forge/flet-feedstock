@@ -1,5 +1,5 @@
 {% set name = "flet" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flet-{{ version }}.tar.gz
-  sha256: cf1368165f490d4f981d8bef254c1f58bdbfd0283c4b45478f86bf21ab4015de
+  sha256: 61ffb25c8b570853085735afb41c3ffd7d462b38f647560c451ae374749b0b1a
 
 build:
   noarch: python
@@ -25,13 +25,12 @@ requirements:
     - copier >=8.0.0,<9.0.0
     - flet-runtime =={{ version }}
     - packaging >=23.1,<24.0
-    - pydantic <2
     - python >=3.7,<4.0
+    - pydantic <2
     - qrcode >=7.4.2,<8.0.0
-    
     - typing_extensions >=4.6.2,<5.0.0
     - watchdog >=3.0.0,<4.0.0
-    - websockets >=11.0.3,<12.0
+    - websockets >=11.0.3,<12.0.0
     - websocket-client >=1.5.2,<2.0.0
 
 test:
