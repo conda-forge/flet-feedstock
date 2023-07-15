@@ -22,15 +22,17 @@ requirements:
     - poetry-core
     - python >=3.7,<4.0
   run:
-    - flet-core =={{ version }}
-    - httpx >=0.23.3,<0.24.0
-    - oauthlib >=3.2.2,<4.0.0
-    - packaging >=23.0,<24.0
+    - copier >=8.0.0,<9.0.0
+    - flet-runtime =={{ version }}
+    - packaging >=23.1,<24.0
+    - pydantic <2
     - python >=3.7,<4.0
-    - typing_extensions >=4.4.0,<5.0.0
-    - watchdog >=2.2.1,<3.0.0
-    - websockets >=10.4,<11.0
-    - websocket-client >=1.4.2,<2.0.0
+    - qrcode >=7.4.2,<8.0.0
+    
+    - typing_extensions >=4.6.2,<5.0.0
+    - watchdog >=3.0.0,<4.0.0
+    - websockets >=11.0.3,<12.0
+    - websocket-client >=1.5.2,<2.0.0
 
 test:
   imports:
