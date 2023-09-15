@@ -1,5 +1,5 @@
 {% set name = "flet" %}
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flet-{{ version }}.tar.gz
-  sha256: f06e20d79590bdfdc2c02267605b32d0551ee434f2aeb44053f2a73f88ab1654
+  sha256: 7745afe2f973f6c6c583d29b45890890d50b2f0bcfc44ab5b8295f744052c9a5
 
 build:
   noarch: python
@@ -22,11 +22,10 @@ requirements:
     - poetry-core
     - python >=3.7,<4.0
   run:
-    - copier >=8.0.0,<9.0.0
+    - copier >=8.2.0,<9.0.0
     - flet-runtime =={{ version }}
     - packaging >=23.1,<24.0
     - python >=3.7,<4.0
-    - pydantic <2
     - qrcode >=7.4.2,<8.0.0
     - typing_extensions >=4.6.2,<5.0.0
     - watchdog >=3.0.0,<4.0.0
