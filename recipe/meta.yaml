@@ -1,5 +1,5 @@
 {% set name = "flet" %}
-{% set version = "0.11.0" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flet-{{ version }}.tar.gz
-  sha256: ce739566a4c69afc64ff4667b0b4d3c6515ad091e0fb0d50dd74185de10c102c
+  sha256: e4fe2dffa16bfe11d79a042403a5261c903b50141cda9ca048d3bd701be3c04c
 
 build:
   noarch: python
@@ -22,6 +22,7 @@ requirements:
     - poetry-core
     - python >=3.7,<4.0
   run:
+    - cookiecutter >=2.4.0,<3.0.0
     - copier >=8.2.0,<9.0.0
     - flet-runtime =={{ version }}
     - packaging >=23.1,<24.0
