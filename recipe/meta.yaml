@@ -22,6 +22,7 @@ requirements:
     - poetry-core
     - python >=3.7,<4.0
   run:
+    - cookiecutter >=2.4.0,<3.0.0
     - copier >=8.2.0,<9.0.0
     - flet-runtime =={{ version }}
     - packaging >=23.1,<24.0
