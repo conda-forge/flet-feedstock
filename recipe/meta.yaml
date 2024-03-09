@@ -1,5 +1,5 @@
 {% set name = "flet" %}
-{% set version = "0.21.0" %}
+{% set version = "0.21.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flet-{{ version }}.tar.gz
-  sha256: fe8f7d9b57a9c5d909fb4d549262b54954f4bb17645ef1cf16ad56bd4e31df01
+  sha256: 60031992ef236dd43c26f52be5a2c04c81888930e61ba086bdf50aa36f2aee4b
 
 build:
   noarch: python
@@ -24,13 +24,12 @@ requirements:
   run:
     - python >=3.8,<4.0
     - flet-runtime =={{ version }}
-    - watchdog >=3.0.0,<4.0.0
+    - watchdog >=4.0.0,<5.0.0
     - packaging >=23.1,<24.0
     - qrcode >=7.4.2,<8.0.0
-    - copier >=8.2.0,<9.0.0
-    - cookiecutter >=2.4.0,<3.0.0
-    - fastapi >=0.109.2,<0.110.0
-    - uvicorn >=0.27.1,<0.28.0
+    - cookiecutter >=2.6.0,<3.0.0
+    - fastapi >=0,<1
+    - uvicorn-standard >=0,<1
 
 test:
   imports:
@@ -42,8 +41,8 @@ test:
     - pip
 
 about:
-  home: https://github.com/flet-dev/flet
-  dev_url: https://github.com/flet-dev/flet/tree/main/sdk/python
+  home: https://flet.dev
+  dev_url: https://github.com/flet-dev/flet
   doc_url: https://flet.dev/docs/
   summary: Flet for Python - easily build interactive multi-platform apps in Python
   license: Apache-2.0
