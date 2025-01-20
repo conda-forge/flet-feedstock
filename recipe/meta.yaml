@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flet-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/flet-{{ version }}.tar.gz
   sha256: 754989e8314c3ca9f02b4fff2e1aac4e1395fc712175547e2f84a7f1f0f560a1
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - flet = flet.cli.cli:main
 
@@ -20,9 +20,9 @@ requirements:
   host:
     - pip
     - poetry-core
-    - python
+    - python {{ python_min }}
   run:
-    - python >=3.8,<4.0
+    - python >={{ python_min }},<4.0
     - flet-runtime =={{ version }}
     - watchdog >=4.0.0,<5.0.0
     - packaging >=23.1,<24.0
@@ -39,6 +39,7 @@ test:
     - flet --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://flet.dev
