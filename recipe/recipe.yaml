@@ -33,19 +33,13 @@ requirements:
     - msgpack-python >=1.1.0
     - typing-extensions
 
+# No cli test for now as it's a circular dependency on flet itself
 tests:
   - python:
       imports:
         - flet
       pip_check: true
       python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - python ${{ python_min }}.*
-        # Skip this for now as it's circular dependency with flet
-        # - flet-cli
-    # script:
-      # - flet --help
 
 about:
   summary: Flet for Python - easily build interactive multi-platform apps in Python
