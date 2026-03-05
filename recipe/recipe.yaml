@@ -42,9 +42,10 @@ tests:
   - requirements:
       run:
         - python ${{ python_min }}.*
-        - flet-cli
-    script:
-      - flet --help
+        # Skip this for now as it's circular dependency with flet
+        # - flet-cli
+    # script:
+      # - flet --help
 
 about:
   summary: Flet for Python - easily build interactive multi-platform apps in Python
