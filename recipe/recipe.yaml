@@ -39,7 +39,9 @@ tests:
       imports:
         - flet
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Flet for Python - easily build interactive multi-platform apps in Python
