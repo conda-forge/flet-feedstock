@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: flet
-  version: "0.86.3"
+  version: "0.86.4"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/flet-${{ version }}.tar.gz
-  sha256: 278a590c196c86de691f5cf9b75f622288d8763423ff1944629c9376650bba2d
+  sha256: b5a66bd320196d3bed7d7fa5bb0ce79da734282de6a531cb2a73c06d5cbdb174
 
 build:
   number: 0
@@ -31,7 +31,7 @@ requirements:
     - httpx >=0.28.1
     - repath >=0.9.0
     - msgpack-python >=1.1.0
-    - typing-extensions
+    - typing_extensions
 
 # No cli test for now as it's a circular dependency on flet itself
 tests:
