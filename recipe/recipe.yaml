@@ -31,7 +31,6 @@ requirements:
     - httpx >=0.28.1
     - repath >=0.9.0
     - msgpack-python >=1.1.0
-    - typing_extensions
 
 # No cli test for now as it's a circular dependency on flet itself
 tests:
